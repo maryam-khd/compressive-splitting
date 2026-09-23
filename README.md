@@ -4,17 +4,17 @@ Finite-element implementation accompanying:
 
 **M. Khodadad, F. Barthelat, J. D. Clayton, G. Gazonas, and K. Dayal,  
 “Compressive Splitting in Brittle Solids: The Inverse of Wrinkling in Sheets,”  
-Physical Review Letters (2026).**  
-DOI: `10.1103/j8x1-hy4t`
+Physical Review Letters (2026).**
+
+DOI: [10.1103/j8x1-hy4t](https://doi.org/10.1103/j8x1-hy4t)
 
 This repository is intentionally small. It extracts the core pre-fracture
 finite-element calculation used to evaluate the **boundary-induced tension
 coefficient**
 
 $$
-k = \frac{\sigma_{xx,\max}}{\sigma_c},
+k = \frac{\sigma_{xx,\max}}{\sigma_c}.
 $$
-
 
 ## What the code computes
 
@@ -58,22 +58,16 @@ calculation in the paper:
 - homogeneous, isotropic, linear elasticity;
 - small strain;
 - 2D **plane strain**;
-- rectangular specimen;
 - compression along the `y` direction;
 - top and bottom loading faces fully clamped laterally (`u_x = 0`);
-- symmetric prescribed axial displacement on the top and bottom faces;
-- traction-free side faces;
-- first-order Lagrange displacement elements;
-- triangular mesh with crossed diagonals;
-- direct LU linear solve.
+- symmetric prescribed axial displacement on the top and bottom faces.
 
 This code evaluates the **pre-fracture elastic stress state**. It does not
 simulate crack propagation or fracture evolution.
 
 The displacement formulation is for `-1 < nu < 0.5`. The exactly
 incompressible case `nu = 0.5` requires the mixed displacement-pressure
-formulation used separately in the research code and is deliberately not
-silently approximated here.
+formulation used separately in the research code.
 
 ## Installation
 
@@ -98,6 +92,7 @@ model = CompressiveSplittingModel(
 )
 
 result = model.solve()
+
 print(result.k)
 ```
 
@@ -125,13 +120,27 @@ A complete runnable example is in `examples/basic_usage.py`.
 
 ## Citation
 
-If this code or the model is useful in your work, please cite the paper.
-GitHub's **Cite this repository** button is populated by `CITATION.cff`.
+If you use this code or the model in your work, please cite:
+
+> M. Khodadad, F. Barthelat, J. D. Clayton, G. Gazonas, and K. Dayal,  
+> “Compressive Splitting in Brittle Solids: The Inverse of Wrinkling in Sheets,”  
+> *Physical Review Letters* (2026).  
+> https://doi.org/10.1103/j8x1-hy4t
+
+BibTeX:
+
+```bibtex
+@article{khodadad2026compressive,
+  title   = {Compressive Splitting in Brittle Solids: The Inverse of Wrinkling in Sheets},
+  author  = {Khodadad, Maryam and Barthelat, Francois and Clayton, John D. and Gazonas, George and Dayal, Kaushik},
+  journal = {Physical Review Letters},
+  year    = {2026},
+  doi     = {10.1103/j8x1-hy4t}
+}
+```
+
+GitHub's **Cite this repository** button is also populated by `CITATION.cff`.
 
 ## Scope
 
-The goal of this repository is reproducibility of the core coefficient `k` and
-the associated strength/confinement relations—not reproduction of every
-publication figure. Figure-generation scripts, experimental digitization, and
-publication-specific styling are intentionally omitted from this minimal
-interface.
+The goal of this repository is reproducibility of the core coefficient `k`.
