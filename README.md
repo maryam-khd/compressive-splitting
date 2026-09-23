@@ -12,9 +12,9 @@ This repository is intentionally small. It extracts the core pre-fracture
 finite-element calculation used to evaluate the **boundary-induced tension
 coefficient**
 
-$$
-k = \frac{\sigma_{xx,\max}}{\sigma_c}.
-$$
+```math
+k = \frac{\sigma_{xx,\max}}{\sigma_c}
+```
 
 ## What the code computes
 
@@ -24,18 +24,19 @@ stress field and returns `k`.
 
 In the model,
 
-$$
+```math
 \sigma_{xx,\max}
-= k(L/B,\nu)\,\sigma_c - \sigma_{\mathrm{conf}},
-$$
+=
+k(L/B,\nu)\,\sigma_c-\sigma_{\mathrm{conf}}
+```
 
 so the predicted onset of tensile splitting is
 
-$$
+```math
 \sigma_{c,\mathrm{crit}}
 =
-\frac{\sigma_t+\sigma_{\mathrm{conf}}}{k(L/B,\nu)}.
-$$
+\frac{\sigma_t+\sigma_{\mathrm{conf}}}{k(L/B,\nu)}
+```
 
 Here:
 
