@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this software or model, please cite the associated Physical Review Letters paper."
+title: "Compressive Splitting in Brittle Solids: minimal finite-element implementation"
+type: software
+authors:
+  - family-names: Khodadad
+    given-names: Maryam
+  - family-names: Barthelat
+    given-names: Francois
+  - family-names: Clayton
+    given-names: John D.
+  - family-names: Gazonas
+    given-names: George
+  - family-names: Dayal
+    given-names: Kaushik
+year: 2026
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Khodadad
+      given-names: Maryam
+    - family-names: Barthelat
+      given-names: Francois
+    - family-names: Clayton
+      given-names: John D.
+    - family-names: Gazonas
+      given-names: George
+    - family-names: Dayal
+      given-names: Kaushik
+  title: "Compressive Splitting in Brittle Solids: The Inverse of Wrinkling in Sheets"
+  journal: "Physical Review Letters"
+  year: 2026
+  doi: "10.1103/j8x1-hy4t"
