@@ -1,6 +1,6 @@
 # Compressive Splitting in Brittle Solids
 
-Minimal finite-element implementation accompanying:
+Finite-element implementation accompanying:
 
 **M. Khodadad, F. Barthelat, J. D. Clayton, G. Gazonas, and K. Dayal,  
 “Compressive Splitting in Brittle Solids: The Inverse of Wrinkling in Sheets,”  
@@ -11,11 +11,10 @@ This repository is intentionally small. It extracts the core pre-fracture
 finite-element calculation used to evaluate the **boundary-induced tension
 coefficient**
 
-\[
+$$
 k = \frac{\sigma_{xx,\max}}{\sigma_c},
-\]
+$$
 
-without including the publication-specific plotting and parameter-sweep code.
 
 ## What the code computes
 
@@ -25,18 +24,18 @@ stress field and returns `k`.
 
 In the model,
 
-\[
+$$
 \sigma_{xx,\max}
 = k(L/B,\nu)\,\sigma_c - \sigma_{\mathrm{conf}},
-\]
+$$
 
 so the predicted onset of tensile splitting is
 
-\[
+$$
 \sigma_{c,\mathrm{crit}}
 =
 \frac{\sigma_t+\sigma_{\mathrm{conf}}}{k(L/B,\nu)}.
-\]
+$$
 
 Here:
 
