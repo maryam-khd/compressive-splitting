@@ -144,4 +144,4 @@ GitHub's **Cite this repository** button is also populated by `CITATION.cff`.
 
 ## Scope
 
-The goal of this repository is reproducibility of the core coefficient `k`.
+The goal of this repository is reproducibility of the Boundary Tension Coefficient `k`.
